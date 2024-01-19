@@ -19,9 +19,14 @@ const ResultModal = forwardRef(function (
   });
 
   return (
-    <dialog ref={dialogRef} className="result-modal">
+    <dialog ref={dialogRef} className="result-modal" onClose={onReset}>
       {userLost && <h2>You lost 💀</h2>}
-      {!userLost && <h2>Your Score: {score}</h2>}
+      {!userLost && (
+        <h2>
+          Your Score: {score}
+          {score === 100 ? " 💯" : " 🫡"}
+        </h2>
+      )}
       <p>
         The target time was <strong>{targetTime}</strong> second
         {targetTime > 1 ? "s" : ""}.
