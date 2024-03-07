@@ -261,15 +261,21 @@ header p {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
+  #home-button {
+    top: 11.6rem;
+  }
+
   .home-text {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   #home-button {
-    top: 11.6rem;
+    top: 0;
+    border-radius: 0 10px 0 10px;
+    border-right: 1px solid #54a399;
   }
 
   .home-text {
